@@ -1,7 +1,11 @@
-/** CSS STYLE **/
-
-.hello {
-  display: block;
-
-  color: #fff;
+:root {
+  --white: #fff;
+  --white-translucent: #d7ccc0;
+  --light: #f5f4f0;
+  --primary: #fe8a02;
+  --primary-dark: #42413c;
+  --dark: #2a2626;
+  --dark-translucent: #908d8b;
+  --brown: #b09a81;
+  --blue: #1085c5;
 }
