@@ -13,54 +13,137 @@
 @font-face {
   font-weight: 400;
   font-family: "Open Sans";
-  src: url("/assets/fonts/OpenSans-Regular.ttf");
+  src: url("https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2") format("woff2");
+
+  /* src: url("/assets/fonts/OpenSans-Regular.ttf"); */
 }
 
 @font-face {
   font-weight: 700;
   font-family: "Open Sans";
-  src: url("/assets/fonts/OpenSans-Bold.ttf");
+  src: url("https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2") format("woff2");
+
+  /* src: url("/assets/fonts/OpenSans-Bold.ttf"); */
 }
 
 @font-face {
   font-weight: 400;
   font-family: Neucha;
-  src: url("/assets/fonts/Neucha-Regular.ttf");
+  src: url("https://fonts.gstatic.com/s/neucha/v17/q5uGsou0JOdh94bfuQltOxU.woff2") format("woff2");
+
+  /* src: url("/assets/fonts/Neucha-Regular.ttf"); */
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 100vw;
   margin: 0;
 
   color: var(--dark);
   font: 400 16px/1.6em "Open Sans", sans-serif;
 }
 
-h1,
-h2,
-h3 {
+.h1,
+.h2,
+.h3 {
+  margin: 0;
+
+  font-weight: 400;
+  font-family: Neucha, sans-serif;
   line-height: 1.2em;
 }
 
-h1 {
+.h1 {
   font-size: 72px;
 }
 
-h2 {
+.h2 {
   font-size: 60px;
 }
 
-h3 {
+.h3 {
   font-size: 34px;
 }
 
-header,
-section,
-footer {
+.accent {
+  color: var(--primary);
+}
+
+.landing-block {
+  position: relative;
+
   width: 1110px;
   padding: 100px 0;
+}
+
+.section-container {
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.content-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.paper-text {
+  display: flex;
+  gap: 30px;
+}
+
+.paper-text-column {
+  width: 50%;
+}
+
+.light-background {
+  background-color: var(--light);
+}
+
+.header-logo {
+  position: absolute;
+  top: 50px;
+  right: -270px;
+
+  width: auto;
+  height: 525px;
+}
+
+.image-background::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: url("../assets/images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+
+  content: "";
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 148px;
+  height: 49px;
+
+  color: var(--white);
+
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+.mb-100 {
+  margin-bottom: 182px;
 }
