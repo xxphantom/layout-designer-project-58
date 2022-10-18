@@ -8,6 +8,7 @@
   --dark-translucent: #908d8b;
   --brown: #b09a81;
   --blue: #1085c5;
+  --main-width: 1110px;
 }
 
 @font-face {
@@ -111,7 +112,7 @@ p {
 .landing-block {
   position: relative;
 
-  width: 1110px;
+  width: var(--main-width);
   padding: 100px 0;
 }
 
@@ -262,4 +263,88 @@ p {
 
 .white {
   color: var(--white);
+}
+
+.footer {
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.subscr-container {
+  display: flex;
+  width: var(--main-width);
+  margin-bottom: 80px;
+}
+
+.subscr-left {
+  padding: 55px;
+}
+
+.subscr-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  padding: 40px 55px 40px 0;
+}
+
+label,
+input {
+  display: block;
+}
+
+.form-email {
+  flex-grow: 1;
+  box-sizing: border-box;
+
+  height: 50px;
+  padding: 15px;
+
+  border: none;
+}
+
+.form-container {
+  display: flex;
+
+  flex-grow: 1;
+  align-items: center;
+}
+
+.form-btn {
+  position: relative;
+
+  width: 70px;
+  height: 50px;
+
+  background-color: var(--primary);
+  border: none;
+}
+
+.form-btn::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url("../assets/images/send.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  content: "";
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.rules {
+  color: var(--white);
+  font-size: 12px;
 }
