@@ -36,6 +36,7 @@ body {
 }
 
 .h1,
+h2,
 .h2,
 .h3,
 .h4 {
@@ -50,6 +51,7 @@ body {
   font-size: 72px;
 }
 
+h2,
 .h2 {
   font-size: 60px;
 }
@@ -59,8 +61,15 @@ body {
 }
 
 .h4 {
-  color: var(--dark-translucent);
   font-size: 24px;
+}
+
+.dark-translucent {
+  color: var(--dark-translucent);
+}
+
+.white-translucent {
+  color: var(--white-translucent);
 }
 
 p {
@@ -75,6 +84,10 @@ p {
   margin-bottom: 30px;
 }
 
+.mb-40 {
+  margin-bottom: 40px;
+}
+
 .mb-100 {
   margin-bottom: 100px;
 }
@@ -83,8 +96,12 @@ p {
   color: var(--primary);
 }
 
-.light-text {
+.light {
   color: var(--white);
+}
+
+.brown {
+  color: var(--brown);
 }
 
 .align-center {
@@ -121,6 +138,10 @@ p {
 
 .dark-background {
   background-color: var(--primary-dark);
+}
+
+.brown-background {
+  background-color: var(--brown);
 }
 
 .header-logo {
@@ -230,13 +251,15 @@ p {
 .footnote {
   margin: 100px 0 20px;
   padding: 5px 10px;
-
-  background-color: var(--brown);
 }
 
-.footnote > h3 {
+.footnote-text {
   margin: 0;
 
-  color: var(--white);
+  font-size: 14px;
   text-transform: uppercase;
+}
+
+.white {
+  color: var(--white);
 }
