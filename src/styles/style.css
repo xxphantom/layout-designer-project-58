@@ -5,7 +5,7 @@
   --primary: #fe8a02;
   --primary-dark: #42413c;
   --dark: #2a2626;
-  --dark-translucent: #909d8b;
+  --dark-translucent: #908d8b;
   --brown: #b09a81;
   --blue: #1085c5;
 }
@@ -35,9 +35,22 @@ body {
   font: 400 16px/1.6em "Open Sans", sans-serif;
 }
 
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
 .h1,
 .h2,
-.h3 {
+.h3,
+.h4 {
   margin: 0;
 
   font-weight: 400;
@@ -57,6 +70,11 @@ body {
   font-size: 34px;
 }
 
+.h4 {
+  color: var(--dark-translucent);
+  font-size: 24px;
+}
+
 p {
   margin-bottom: 0;
 }
@@ -66,7 +84,7 @@ p {
 }
 
 .light-text {
-  color: var(--white)
+  color: var(--white);
 }
 
 .align-center {
@@ -80,7 +98,7 @@ p {
   padding: 100px 0;
 }
 
-.section-container {
+.section {
   position: relative;
 
   display: flex;
@@ -162,7 +180,9 @@ p {
   z-index: 100;
 
   margin-top: -200px;
+}
 
+.shadow {
   filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
 }
 
@@ -205,4 +225,18 @@ p {
 
 .nav-header {
   font-size: 52px;
+}
+
+.footnote {
+  margin: 100px 0 20px;
+  padding: 5px 10px;
+
+  background-color: var(--brown);
+}
+
+.footnote > h3 {
+  margin: 0;
+
+  color: var(--white);
+  text-transform: uppercase;
 }

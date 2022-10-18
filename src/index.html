@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <div class="section-container light-background image-background">
-    <header class="landing-block">
+  <header class="section light-background image-background">
+    <div class="landing-block">
         <h1 class="h1 header-title"><span class="accent">Когнитивные<br>искажения</span><br>в программировании </h1>
         <img class="header-logo" src="assets/images/main.png" alt="Нарисованный человек сидит за ноутбуком в позе лотоса">
       <div class="paper-block">
@@ -24,22 +24,22 @@
           <a class="btn" href="#navigation">Подробнее</a>
         </div>
       </div>
-    </header>
-  </div>
+    </div>
+  </header>
   <main>
-    <div class="section-container">
-      <section class="landing-block align-center">
+    <section class="section">
+      <div class="landing-block align-center">
         <h2 class="h2">Что же это такое,<br><span class="accent">когнитивные искажения?</span></h2>
         <p class="video-title">Что такое когнитивные искажения. Petrovna Channel</p>
-        <iframe class="video" width="919" height="569" src="https://www.youtube.com/embed/jie9AizBqss" frameborder="0" allowfullscreen></iframe>
-      </section>
-    </div>
-    <div id="navigation" class="section-container dark-background">
-      <section class="landing-block navigation">
-      <div class="nav-block">
-        <h2 class="h2 nav-header light-text"><span class="accent">5 когнитивных искажений</span> о существовании которых стоит помнить</h2>
+        <iframe class="video shadow" width="919" height="569" src="https://www.youtube.com/embed/jie9AizBqss" frameborder="0" allowfullscreen></iframe>
       </div>
-      <a href="#" class="nav-block nav-card">
+    </section>
+    <section id="navigation" class="section dark-background">
+      <div class="landing-block navigation">
+      <div class="nav-block">
+        <h2 class="h2 nav-header light-text"><span class="accent">5 когнитивных искажений</span><br>о существовании которых стоит помнить</h2>
+      </div>
+      <a href="#ikea-effect" class="nav-block nav-card">
         <h2 class="h2">1</h2>
         <h3 class="h3 accent">Эффект ИКЕА</h3>
         <p>Вы переоцениваете собственные решения, и, как следствие, недооцениваете решения других.</p>
@@ -64,11 +64,30 @@
         <h3 class="h3 accent">Ошибка планирования</h3>
         <p>Неправильно рассчитывать время необходимое для завершения задачи.</p>
       </a>
-      </section>
-    </div>
+      </div>
+    </section>
+    <section id="ikea-effect" class="section light-background image-background">
+      <div class="landing-block">
+        <div class="paper-block">
+          <img class="shadow" src="assets/images/1.png" width="578" height="434" alt="Два нарисованных человечка смотрят в монитор">
+          <div>
+            <span class="h4">Когнитивные искажения</span>
+            <h2 class="h2 mb-30">Эффект ИКЕА</h2>
+            <span class="h3">Вы переоцениваете собственные решения, и, как следствие, недооцениваете решения других.</span>
+          </div>
+        </div>
+        <div class="footnote">
+          <h3>Как проявляется</h3>
+        </div>
+        <div class="paper-block">
+          <div class="paper-column"><p>Когнитивное искажение называется так из-за того, что потребители зачастую предпочитают покупать товары, которые они могут собрать сами, а не уже собранные кем-то.</p></div>
+          <div class="paper-column"><p>Мы склонны переоцнивать наши собственные решения и недооценивать решения других. Если вы когда-то работали в компании, которая использовала тупой внутренний инструмент вместо более удобного готового решения, вы понимаете, о чём я говорю.</p></div>
+        </div>
+      </div>
+    </section>
   </main>
-  <div class="section-container">
+  <section class="section">
     <footer class="landing-block">Footer</footer>
-  </div>
+  </section>
 </body>
 </html>
