@@ -1,3 +1,27 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Open Sans";
+  src:
+    local("Open Sans Regular"),
+    url("/assets/fonts/OpenSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Open Sans";
+  src:
+    local("Open Sans Bold"),
+    url("/assets/fonts/OpenSans-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: Neucha;
+  src:
+    local("Neucha Regular"),
+    url("/assets/fonts/Neucha-Regular.woff2") format("woff2");
+}
+
 :root {
   --white: #fff;
   --white-translucent: #d7ccc0;
@@ -9,38 +33,26 @@
   --brown: #b09a81;
   --blue: #1085c5;
   --main-width: 1110px;
-}
-
-@font-face {
-  font-weight: 400;
-  font-family: "Open Sans";
-  src: url("/assets/fonts/OpenSans-Regular.ttf");
-}
-
-@font-face {
-  font-weight: 700;
-  font-family: "Open Sans";
-  src: url("/assets/fonts/OpenSans-Bold.ttf");
-}
-
-@font-face {
-  font-weight: 400;
-  font-family: Neucha;
-  src: url("/assets/fonts/Neucha-Regular.ttf");
+  --nav-gap: 30px;
 }
 
 body {
-  margin: 0;
-
   color: var(--dark);
   font: 400 16px/1.6em "Open Sans", sans-serif;
 }
 
-.h1,
+iframe {
+  border: none;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+h1,
 h2,
-.h2,
-.h3,
-.h4 {
+h3,
+.headline {
   margin: 0;
 
   font-weight: 400;
@@ -48,21 +60,37 @@ h2,
   line-height: 1.2em;
 }
 
-.h1 {
+h1 {
   font-size: 72px;
 }
 
-h2,
-.h2 {
+h2 {
   font-size: 60px;
 }
 
-.h3 {
+h3,
+.fs-h3 {
   font-size: 34px;
 }
 
-.h4 {
+.fs-52 {
+  font-size: 52px;
+}
+
+.fs-24 {
   font-size: 24px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-12 {
+  font-size: 12px;
 }
 
 .dark-translucent {
@@ -71,10 +99,6 @@ h2,
 
 .white-translucent {
   color: var(--white-translucent);
-}
-
-p {
-  margin-bottom: 0;
 }
 
 .mb-20 {
@@ -97,12 +121,24 @@ p {
   color: var(--primary);
 }
 
-.light {
+.white {
   color: var(--white);
 }
 
 .brown {
   color: var(--brown);
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.bg-dark {
+  background-color: var(--primary-dark);
+}
+
+.bg-brown {
+  background-color: var(--brown);
 }
 
 .align-center {
@@ -124,6 +160,14 @@ p {
   justify-content: center;
 }
 
+.header {
+  overflow: hidden;
+}
+
+.header-h1 {
+  margin-bottom: 2.55em;
+}
+
 .paper-block {
   display: flex;
   gap: 30px;
@@ -131,18 +175,6 @@ p {
 
 .paper-column {
   width: 50%;
-}
-
-.light-background {
-  background-color: var(--light);
-}
-
-.dark-background {
-  background-color: var(--primary-dark);
-}
-
-.brown-background {
-  background-color: var(--brown);
 }
 
 .header-logo {
@@ -154,7 +186,7 @@ p {
   height: 525px;
 }
 
-.image-background::before {
+.bg-image::before {
   position: absolute;
   top: 0;
   right: 0;
@@ -188,10 +220,6 @@ p {
   cursor: pointer;
 }
 
-.header-title {
-  margin-bottom: 2.55em;
-}
-
 .video-title {
   margin: 30px 0;
 }
@@ -211,14 +239,14 @@ p {
 .navigation {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: var(--nav-gap);
 
   padding-top: 200px;
 }
 
 .nav-block {
   box-sizing: border-box;
-  width: calc((100% - 60px) / 3);
+  width: calc((100% - (var(--nav-gap) * 2)) / 3);
 }
 
 .nav-card {
@@ -228,10 +256,10 @@ p {
   color: inherit;
   text-decoration: none;
 
-  background-color: var(--light);
+  background-color: var(--white);
 }
 
-.nav-card > .h2 {
+.nav-card-number {
   margin-bottom: 40px;
 
   font-size: 64px;
@@ -239,14 +267,10 @@ p {
 }
 
 .nav-card:hover,
-.nav-card:hover :where(.h2, .h3, p) {
+.nav-card:hover h3 {
   color: var(--white);
 
   background-color: var(--primary);
-}
-
-.nav-header {
-  font-size: 52px;
 }
 
 .footnote {
@@ -257,12 +281,10 @@ p {
 .footnote-text {
   margin: 0;
 
+  font-weight: 700;
   font-size: 14px;
+  font-family: inherit;
   text-transform: uppercase;
-}
-
-.white {
-  color: var(--white);
 }
 
 .footer {
@@ -287,11 +309,6 @@ p {
   justify-content: center;
   justify-items: center;
   padding: 40px 55px 40px 0;
-}
-
-label,
-input {
-  display: block;
 }
 
 .form-email {
@@ -334,17 +351,4 @@ input {
   background-position: 50% 50%;
 
   content: "";
-}
-
-.fs-18 {
-  font-size: 18px;
-}
-
-.fs-14 {
-  font-size: 14px;
-}
-
-.rules {
-  color: var(--white);
-  font-size: 12px;
 }
